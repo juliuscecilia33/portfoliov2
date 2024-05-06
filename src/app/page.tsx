@@ -28,7 +28,7 @@ export default function Home() {
           height={155}
           className="aspect-square rounded-lg mb-4"
         />
-        <h1 className="text-3xl">Hey, Im Julius!</h1>
+        <h1 className="text-3xl font-bold">Hey, Im Julius!</h1>
       </section>
       <section
         className={`ml-10 bg-[#2E303E] p-10 rounded-lg w-4/5 font-heading flex min-h-screen flex-col ${spaceGrotesk.className}`}
@@ -79,6 +79,27 @@ export default function Home() {
             </button>
           </div>
           <div
+            className={`flex flex-col w-full opacity-0 transition-opacity duration-400 ${
+              isOpen ? "opacity-100 h-full" : "h-0"
+            }`}
+          >
+            <p className="text-[#E95278] font-bold mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+              risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+              nec, ultricies sed, dolor.
+            </p>
+            <p className="text-[#E95278] font-bold mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+              risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+              nec, ultricies sed, dolor.
+            </p>
+            <p className="text-[#E95278] font-bold mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+              risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+              nec, ultricies sed, dolor.
+            </p>
+          </div>
+          {/* <div
             className={`flex flex-col w-full ${
               isOpen ? "h-full" : "h-0"
             } overflow-hidden transition-all ease-in-out delay-150`}
@@ -98,7 +119,7 @@ export default function Home() {
               risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
               nec, ultricies sed, dolor.
             </p>
-          </div>
+          </div> */}
         </div>
       </section>
     </main>
