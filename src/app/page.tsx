@@ -88,38 +88,7 @@ export default function Home() {
               risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
               nec, ultricies sed, dolor.
             </p>
-            <p className="text-[#E95278] font-bold mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-              risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
-              nec, ultricies sed, dolor.
-            </p>
-            <p className="text-[#E95278] font-bold mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-              risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
-              nec, ultricies sed, dolor.
-            </p>
           </div>
-          {/* <div
-            className={`flex flex-col w-full ${
-              isOpen ? "h-full" : "h-0"
-            } overflow-hidden transition-all ease-in-out delay-150`}
-          >
-            <p className="text-[#E95278] font-bold mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-              risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
-              nec, ultricies sed, dolor.
-            </p>
-            <p className="text-[#E95278] font-bold mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-              risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
-              nec, ultricies sed, dolor.
-            </p>
-            <p className="text-[#E95278] font-bold mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-              risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
-              nec, ultricies sed, dolor.
-            </p>
-          </div> */}
         </div>
       </section>
     </main>
