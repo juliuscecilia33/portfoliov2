@@ -4,6 +4,7 @@ import { Space_Grotesk } from "next/font/google";
 import Image from "next/image";
 import MyProfile from "../assets/images/JuliusCecilia.jpeg";
 import Adobe from "../assets/images/Adobe.png";
+import IQAir from "../assets/images/IQAir.png";
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Experience from "../components/Experience";
@@ -38,6 +39,44 @@ export default function Home() {
         <Experience
           imageSrc={Adobe}
           imageAlt="Adobe"
+          description={[
+            "Crafted a dynamic email automation solution using Microsoft Outlookʼs Actionable Messages/Adaptive Cards feature and Googleʼs AMP feature for Gmail, optimizing product approval workflows and reducing errors by 30% for Adobeʼs business customers",
+            "Integrated the email solution to Adobe's backend services while maintaining the secure architecture, using Python and Node.js, to guarantee data security and reliability",
+            "Played a key role in the transition of Adobe's Console for Businesses from Angular.js to React.js which required using testing protocols like Jasmine.js and Jest.js to validate the integration and guarantee system performance",
+          ]}
+          positionName="Software Engineer Intern"
+          companyName="Adobe"
+          dateOfExperience="June 2023 - September 2023"
+          programmingLanguages={[
+            "Python",
+            "Node.js",
+            "Angular.js",
+            "React.js",
+            "Jasmine.js",
+            "Jest.js",
+          ]}
+        />
+        <Experience
+          imageSrc={Adobe}
+          imageAlt="Adobe"
+          description={[
+            "Implemented a read-only access mode on Adobeʼs Console for Businesses using React.js, Angular.js, and Java, which resolved customer concerns regarding security and support process by 40%",
+            "Refined data and authentication logic to achieve role-based access control through token-based authentication and integrating with backend APIs to validate user permissions in real-time",
+          ]}
+          positionName="Software Engineer Intern"
+          companyName="Adobe"
+          dateOfExperience="June 2022 - September 2022"
+          programmingLanguages={[
+            "Java",
+            "Angular.js",
+            "React.js",
+            "Jasmine.js",
+            "Jest.js",
+          ]}
+        />
+        <Experience
+          imageSrc={IQAir}
+          imageAlt="IQAir"
           description={[
             "Crafted a dynamic email automation solution using Microsoft Outlookʼs Actionable Messages/Adaptive Cards feature and Googleʼs AMP feature for Gmail, optimizing product approval workflows and reducing errors by 30% for Adobeʼs business customers",
             "Integrated the email solution to Adobe's backend services while maintaining the secure architecture, using Python and Node.js, to guarantee data security and reliability",

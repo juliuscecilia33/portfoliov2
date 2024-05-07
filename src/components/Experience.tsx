@@ -30,13 +30,13 @@ const Experience = ({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-col w-full px-10 pt-8 pb-5 bg-[#1C1E26] rounded-lg border border-[#E95278]">
+    <div className="flex flex-col w-full px-10 pt-8 pb-5 bg-[#1C1E26] rounded-lg border border-[#E95278] mb-10">
       <div className="flex w-full">
         <div className="aspect-square flex p-8 bg-[#E95278] rounded">
           <Image
             src={imageSrc}
             alt={imageAlt}
-            className="aspect-square rounded-lg items-center"
+            className="h-auto aspect-square rounded-lg items-center"
           />
         </div>
         <div className="w-full flex flex-col py-6 px-7 bg-[#2E303E] rounded ml-4">
