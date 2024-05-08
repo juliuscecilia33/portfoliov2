@@ -30,19 +30,19 @@ const Experience = ({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-col w-full px-10 pt-8 pb-5 bg-[#1C1E26] rounded-lg border border-[#E95278] mb-10">
+    <div className="flex flex-col w-full px-10 pt-8 pb-5 bg-[#1C1E26] rounded-lg border border-[#E95278] mb-10 transition-all duration-400">
       <div className="flex w-full">
-        <div className="aspect-square flex p-8 bg-[#E95278] rounded">
+        <div className="w-24 h-24 aspect-square flex p-4 bg-[#E95278] rounded items-center justify-center">
           <Image
             src={imageSrc}
             alt={imageAlt}
-            className="h-auto aspect-square rounded-lg items-center"
+            className="w-auto h-auto rounded-lg items-center"
           />
         </div>
-        <div className="w-full flex flex-col py-6 px-7 bg-[#2E303E] rounded ml-4">
+        <div className="w-full flex flex-col py-6 px-7 bg-[#2E303E] rounded ml-4 mb-5">
           <div className="flex items-end mb-2">
             <h2 className="text-3xl font-bold mr-3">{positionName}</h2>
-            <p className="text-[#E95278] font-bold">{companyName}</p>
+            <p className="text-[#E95278] font-bold mb-px">{companyName}</p>
           </div>
           <h2 className="text-1xl mr-3 mb-3">{dateOfExperience}</h2>
           <div className="flex">
@@ -59,9 +59,9 @@ const Experience = ({
           </div>
         </div>
       </div>
-      <div className="mt-5 mx-auto flex flex-col font-bold items-center">
+      <div className="mx-auto flex flex-col font-bold items-center">
         <button onClick={() => setIsOpen(!isOpen)}>
-          <h3 className="mb-1">Read More</h3>
+          <h3 className="mb-1">Read {isOpen ? `Less` : `More`}</h3>
         </button>
         <button onClick={() => setIsOpen(!isOpen)} className="p-0 m-0">
           {isOpen ? <FaChevronUp /> : <FaChevronDown />}
@@ -73,7 +73,7 @@ const Experience = ({
         }`}
       >
         {description.map((paragraph) => (
-          <p key={paragraph} className="text-white font-bold mb-4">
+          <p key={paragraph} className="text-white font-bold my-5">
             - {paragraph}
           </p>
         ))}
