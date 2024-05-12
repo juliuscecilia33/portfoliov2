@@ -16,6 +16,11 @@ const spaceGrotesk = Space_Grotesk({
   preload: false,
 });
 
+// Icons
+import { MdArrowOutward } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+
 export default function Home() {
   return (
     <main className="flex flex-col">
@@ -70,13 +75,39 @@ export default function Home() {
             </a>
           </li>
         </ul>
-        <h3 className="text-md font-md uppercase">Resume</h3>
+        <div className="flex items-center">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://nextjs.org"
+            className="flex items-center transition-all duration-300 ease-in-out hover:underline mr-5"
+          >
+            <h3 className="text-md font-md uppercase mr-2">Resume</h3>
+            <MdArrowOutward size={20} />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://nextjs.org"
+            className="flex items-center transition-all duration-300 ease-in-out hover:underline mr-5"
+          >
+            <FaLinkedin size={30} />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://nextjs.org"
+            className="flex items-center transition-all duration-300 ease-in-out hover:underline mr-5"
+          >
+            <FaGithub size={30} />
+          </a>
+        </div>
       </div>
       <div
         className={`font-heading flex min-h-screen flex-row p-12 justify-between ${spaceGrotesk.className}`}
       >
         <section
-          className={`pt-10 mr-10 w-1/5 font-heading flex min-h-screen flex-col ${spaceGrotesk.className}`}
+          className={`pt-10 mr-10 w-2/6 font-heading flex min-h-screen flex-col ${spaceGrotesk.className}`}
         >
           <Image
             src={MyProfile}
@@ -88,7 +119,7 @@ export default function Home() {
           <h1 className="text-3xl font-bold">Hey, Im Julius!</h1>
         </section>
         <section
-          className={`ml-10 bg-[#2E303E] p-10 rounded-lg w-4/5 font-heading flex min-h-screen flex-col ${spaceGrotesk.className}`}
+          className={`ml-10 bg-[#2E303E] p-10 rounded-lg w-4/6 font-heading flex min-h-screen flex-col ${spaceGrotesk.className}`}
         >
           <h1 className="text-2xl font-bold mb-8">Experience</h1>
           <Experience
