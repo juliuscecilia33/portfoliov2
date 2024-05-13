@@ -7,16 +7,16 @@ const Navbar = ({}) => {
       <h3 className="text-lg font-bold uppercase">Julius Cecilia</h3>
       <div className="sm:hidden">
         <label htmlFor="tabs" className="sr-only">
-          Select your country
+          Julius Cecilia
         </label>
         <select
           id="tabs"
           className="bg-[#2E303E] border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white focus:outline-none focus:ring-0"
         >
-          <option>Profile</option>
-          <option>Dashboard</option>
-          <option>setting</option>
-          <option>Invoioce</option>
+          <option>Experience</option>
+          <option>Projects</option>
+          <option>Blogs</option>
+          <option>About</option>
         </select>
       </div>
       <ul className="hidden text-sm font-medium text-center text-gray-500 rounded-lg shadow sm:flex dark:divide-gray-700 dark:text-gray-400">

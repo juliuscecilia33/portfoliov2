@@ -1,8 +1,7 @@
-import PropTypes from "prop-types";
 import Image, { StaticImageData } from "next/image";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import { useState } from "react";
-import { Space_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
+
+import { FaChevronRight } from "react-icons/fa";
 
 type ExperienceProps = {
   imageSrc: StaticImageData;
@@ -14,9 +13,7 @@ type ExperienceProps = {
   dateOfExperience: string;
 };
 
-const spaceGrotesk = Space_Grotesk({
-  preload: false,
-});
+const inter = Inter({ subsets: ["latin"] });
 
 const Experience = ({
   imageSrc,
@@ -27,57 +24,44 @@ const Experience = ({
   programmingLanguages,
   dateOfExperience,
 }: ExperienceProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <div className="flex flex-col w-full px-10 pt-8 pb-5 bg-[#1C1E26] rounded-lg border border-[#E95278] mb-10 transition-all duration-400">
-      <div className="flex w-full">
-        <div className="w-24 h-24 aspect-square flex p-4 bg-[#E95278] rounded items-center justify-center">
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            className="w-auto h-auto rounded-lg items-center"
-          />
-        </div>
-        <div className="w-full flex flex-col py-6 px-7 bg-[#2E303E] rounded ml-4 mb-5">
-          <div className="flex items-end mb-2">
-            <h2 className="text-3xl font-bold mr-3">{positionName}</h2>
-            <p className="text-[#E95278] font-bold mb-px">{companyName}</p>
+    <div className="flex flex-col items-center">
+      <div className="flex flex-col w-full px-10 pt-8 pb-2 bg-[#41445A] rounded-lg border border-[#E95278] mb-4 transition-all duration-400 items-center justify-center">
+        <div className="flex w-full">
+          <div className="w-28 h-28 aspect-square flex p-4 bg-[#2E303E] rounded items-center justify-center">
+            <Image
+              src={imageSrc}
+              alt={imageAlt}
+              className="w-auto h-auto rounded-lg items-center"
+            />
           </div>
-          <h2 className="text-1xl mr-3 mb-3">{dateOfExperience}</h2>
-          <div className="flex">
-            {programmingLanguages.map((language) => (
-              <div
-                key={language}
-                className="border border-[#569CD6] py-1 px-4 rounded-full mr-4"
-              >
-                <h3 className="uppercase text-[#569CD6] text-xs font-bold text-center">
-                  {language}
-                </h3>
-              </div>
-            ))}
+          <div className="w-full flex flex-col rounded ml-6 mb-5">
+            <div className="flex items-end mb-2">
+              <h2 className="text-3xl font-bold mr-3">{positionName}</h2>
+              <p className="text-[#E95278] font-bold mb-px">{companyName}</p>
+            </div>
+            <h2 className="text-1xl mr-3 mb-3">{dateOfExperience}</h2>
+            <div className="flex">
+              {programmingLanguages.map((language) => (
+                <div
+                  key={language}
+                  className="border border-[#569CD6] py-1 px-4 rounded-full mr-4"
+                >
+                  <h3 className="uppercase text-[#569CD6] text-xs font-bold text-center">
+                    {language}
+                  </h3>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-      <div className="mx-auto flex flex-col font-bold items-center">
-        <button onClick={() => setIsOpen(!isOpen)}>
-          <h3 className="mb-1">Read {isOpen ? `Less` : `More`}</h3>
-        </button>
-        <button onClick={() => setIsOpen(!isOpen)} className="p-0 m-0">
-          {isOpen ? <FaChevronUp /> : <FaChevronDown />}
-        </button>
-      </div>
-      <div
-        className={`flex flex-col w-full opacity-0 transition-opacity duration-400 ${
-          isOpen ? "opacity-100 h-full" : "h-0"
-        }`}
+      <button
+        className={`flex justify-center items-center mb-10 px-4 py-1.5 bg-[#E95278] text-xs font-inter font-medium rounded-sm ${inter.className}`}
       >
-        {description.map((paragraph) => (
-          <p key={paragraph} className="text-white font-bold my-5">
-            - {paragraph}
-          </p>
-        ))}
-      </div>
+        Read More
+        <FaChevronRight className="ml-1" />
+      </button>
     </div>
   );
 };
