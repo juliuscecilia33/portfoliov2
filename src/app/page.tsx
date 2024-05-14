@@ -5,7 +5,7 @@ import Image from "next/image";
 import MyProfile from "../assets/images/JuliusCecilia.jpeg";
 import Adobe from "../assets/images/Adobe.png";
 import IQAir from "../assets/images/IQAir.png";
-import Chimerocyte from "../assets/images/chimerocyte.png";
+import ChimerocyteWhite from "../assets/images/ChimerocyteWhite.png";
 
 // Components
 import Experience from "../components/Experience";
@@ -13,9 +13,15 @@ import Navbar from "../components/Navbar";
 
 // Font
 import { Space_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
+
 const spaceGrotesk = Space_Grotesk({
   preload: false,
 });
+const inter = Inter({ subsets: ["latin"] });
+
+// Icons
+import { TbSchool } from "react-icons/tb";
 
 export default function Home() {
   return (
@@ -30,11 +36,22 @@ export default function Home() {
           <Image
             src={MyProfile}
             alt="My Profile>"
-            width={155}
-            height={155}
-            className="aspect-square rounded-lg mb-4"
+            width={175}
+            height={175}
+            className="aspect-square rounded-lg mb-5"
           />
-          <h1 className="text-3xl font-bold">Hey, Im Julius!</h1>
+          <h1 className="text-5xl font-bold text-white">Hey, Im Julius!</h1>
+          <div className="mt-24 flex flex-col">
+            <h3
+              className={`flex flex-row items-center font-bold text-3xl text-white ${spaceGrotesk.className}`}
+            >
+              <TbSchool className="text-[#E95278] mr-3" size={40} />
+              Education
+            </h3>
+            <p className={`mt-4 font-semibold text-white ${inter.className}`}>
+              University of Washington (2020-2024)
+            </p>
+          </div>
         </section>
         <section
           className={`ml-10 bg-[#2E303E] p-10 rounded-lg w-4/6 font-heading flex min-h-screen flex-col ${spaceGrotesk.className}`}
@@ -93,7 +110,7 @@ export default function Home() {
             programmingLanguages={["React.js", "Angular.js", "Drupal", "PHP"]}
           />
           <Experience
-            imageSrc={Chimerocyte}
+            imageSrc={ChimerocyteWhite}
             imageAlt="Chimerocyte"
             description={[
               "Built a completely functional website for all employees, including the CEO, managers, and lab technicians, by using React.js and AWS (Amplify, Cognito, Route 53, EC2, Lambda, S3) to create a laboratory management system",
