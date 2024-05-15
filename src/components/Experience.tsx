@@ -26,7 +26,7 @@ const Experience = ({
 }: ExperienceProps) => {
   return (
     <div className="flex flex-col items-center">
-      <div className="flex flex-col w-full px-10 pt-8 pb-2 bg-[#41445A] rounded-lg border border-[#E95278] mb-4 transition-all duration-400 items-center justify-center">
+      <div className="flex flex-col w-full px-10 pt-8 pb-5 bg-[#41445A] rounded-lg border border-[#E95278] mb-4 transition-all duration-400 items-center justify-center">
         <div className="flex w-full">
           <div className="w-28 h-28 aspect-square flex p-4 bg-[#2E303E] rounded items-center justify-center">
             <Image

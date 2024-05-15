@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 const Navbar = ({}) => {
   return (
     <div className="w-full h-24 flex items-center justify-between px-10">
-      <h3 className="text-lg font-bold uppercase">Julius Cecilia</h3>
+      <h3 className="text-lg font-medium uppercase">Julius Cecilia</h3>
       <div className="sm:hidden">
         <label htmlFor="tabs" className="sr-only">
           Julius Cecilia
