@@ -11,6 +11,9 @@ import ChimerocyteWhite from "../assets/images/ChimerocyteWhite.png";
 import Experience from "../components/Experience";
 import Navbar from "../components/Navbar";
 
+// Containers
+import Skills from "../containers/Skills";
+
 // Font
 import { Space_Grotesk } from "next/font/google";
 import { Inter } from "next/font/google";
@@ -45,19 +48,19 @@ export default function Home() {
           <h1 className="text-5xl font-bold text-white">Hey, Im Julius!</h1>
           <div className="mt-20 flex flex-col">
             <h3
-              className={`flex flex-row items-center font-bold text-3xl text-white ${spaceGrotesk.className}`}
+              className={`flex flex-row items-center font-bold text-2xl text-white ${spaceGrotesk.className}`}
             >
               <TbSchool className="text-[#E95278] mr-3" size={40} />
               Education
             </h3>
             <p
-              className={`mt-6 text-lg font-semibold text-white ${inter.className}`}
+              className={`mt-6 text-md font-semibold text-white ${inter.className}`}
             >
               University of Washington (2020-2024)
             </p>
             <div className="flex flex-row mt-3">
               <p
-                className={`text-lg font-semibold text-[#E95278] ${inter.className}`}
+                className={`text-md font-semibold text-[#E95278] ${inter.className}`}
               >
                 <span className="text-[#96979A]">Major:</span> Information
                 Technology
@@ -72,26 +75,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="mt-20 flex flex-col">
-            <h3
-              className={`mb-6 flex flex-row items-center font-bold text-3xl text-white ${spaceGrotesk.className}`}
-            >
-              <PiBracketsCurlyBold className="text-[#E95278] mr-3" size={40} />
-              Skills
-            </h3>
-            <div className="flex flex-row">
-              <div className="flex flex-col text-center">
-                <div className="w-20 h-20 aspect-square flex bg-[#2E303E] rounded items-center justify-center">
-                  <FaReact className="text-[#E95278]" size={50} />
-                </div>
-                <p
-                  className={`mt-1 text-sm font-medium uppercase ${inter.className}`}
-                >
-                  React.js
-                </p>
-              </div>
-            </div>
-          </div>
+          <Skills />
         </section>
         <section
           className={`ml-10 bg-[#2E303E] p-10 rounded-lg w-4/6 font-heading flex min-h-screen flex-col ${spaceGrotesk.className}`}
