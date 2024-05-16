@@ -13,6 +13,7 @@ import Navbar from "../components/Navbar";
 
 // Containers
 import Skills from "../containers/Skills";
+import Education from "@/containers/Education";
 
 // Font
 import { Space_Grotesk } from "next/font/google";
@@ -21,12 +22,6 @@ import { Inter } from "next/font/google";
 const spaceGrotesk = Space_Grotesk({
   preload: false,
 });
-const inter = Inter({ subsets: ["latin"] });
-
-// Icons
-import { TbSchool } from "react-icons/tb";
-import { PiBracketsCurlyBold } from "react-icons/pi";
-import { FaReact } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -46,35 +41,7 @@ export default function Home() {
             className="aspect-square rounded-lg mb-5"
           />
           <h1 className="text-5xl font-bold text-white">Hey, Im Julius!</h1>
-          <div className="mt-20 flex flex-col">
-            <h3
-              className={`flex flex-row items-center font-bold text-2xl text-white ${spaceGrotesk.className}`}
-            >
-              <TbSchool className="text-[#E95278] mr-3" size={40} />
-              Education
-            </h3>
-            <p
-              className={`mt-6 text-md font-semibold text-white ${inter.className}`}
-            >
-              University of Washington (2020-2024)
-            </p>
-            <div className="flex flex-row mt-3">
-              <p
-                className={`text-md font-semibold text-[#E95278] ${inter.className}`}
-              >
-                <span className="text-[#96979A]">Major:</span> Information
-                Technology
-              </p>
-            </div>
-            <div className="flex flex-row mt-3">
-              <p
-                className={`text-lg font-semibold text-[#E95278] ${inter.className}`}
-              >
-                <span className="text-[#96979A]">Minor:</span> Business
-                Administration
-              </p>
-            </div>
-          </div>
+          <Education />
           <Skills />
         </section>
         <section
