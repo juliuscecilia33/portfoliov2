@@ -1,9 +1,7 @@
+import Experience from "../components/Experience";
 import Adobe from "../assets/images/Adobe.png";
 import IQAir from "../assets/images/IQAir.png";
 import ChimerocyteWhite from "../assets/images/ChimerocyteWhite.png";
-
-import Experience from "../components/Experience";
-
 import { Space_Grotesk } from "next/font/google";
 
 const spaceGrotesk = Space_Grotesk({
@@ -12,7 +10,7 @@ const spaceGrotesk = Space_Grotesk({
 
 const Experiences = () => {
   return (
-    <section
+    <div
       className={`ml-10 bg-[#2E303E] p-10 rounded-lg w-4/6 font-heading flex min-h-screen flex-col ${spaceGrotesk.className}`}
     >
       <h1 className="text-2xl font-bold mb-8">Experience</h1>
@@ -80,7 +78,7 @@ const Experiences = () => {
         dateOfExperience="March 2021 - August 2021"
         programmingLanguages={["React.js", "Python", "AWS"]}
       />
-    </section>
+    </div>
   );
 };
 
