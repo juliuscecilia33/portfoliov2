@@ -13,11 +13,14 @@ import Education from "@/containers/Education";
 
 // Font
 import { Space_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
+
 import Experiences from "@/containers/Experiences";
 
 const spaceGrotesk = Space_Grotesk({
   preload: false,
 });
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -39,6 +42,11 @@ export default function Home() {
           <h1 className="text-5xl font-bold text-white">Hey, Im Julius!</h1>
           <Education />
           <Skills />
+          <button
+            className={`flex justify-center items-center mt-10 px-4 py-1.5 bg-[#E95278] text-xs font-inter font-medium rounded-sm ${inter.className}`}
+          >
+            Download Resume
+          </button>
         </section>
         <Experiences />
       </div>
