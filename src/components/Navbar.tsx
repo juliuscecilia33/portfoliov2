@@ -1,7 +1,14 @@
+"use client";
+
 import { MdArrowOutward } from "react-icons/md";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 
 const Navbar = ({}) => {
+  const path = usePathname();
+  console.log("current path", path);
+
   return (
     <div className="w-full h-24 flex items-center justify-between px-10">
       <h3 className="text-lg font-medium uppercase">Julius Cecilia</h3>
@@ -21,13 +28,17 @@ const Navbar = ({}) => {
       </div>
       <ul className="hidden text-sm font-medium text-center text-gray-500 rounded-lg shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
         <li className="w-full focus-within:z-10">
-          <a
-            href="#"
-            className="inline-block w-full py-4 px-10 text-gray-900 bg-gray-100 border-r border-gray-200 dark:border-gray-700 rounded-s-lg focus:ring-1 focus:ring-rose-400 active focus:outline-none dark:bg-[#E95278] dark:text-white"
+          <Link
+            href="/"
+            className={
+              path == "/"
+                ? "inline-block w-full py-4 px-10 text-gray-900 bg-gray-100 border-r border-gray-200 dark:border-gray-700 rounded-s-lg focus:ring-1 focus:ring-rose-400 active focus:outline-none dark:bg-[#E95278] dark:text-white"
+                : "inline-block w-full py-4 px-10 bg-white border-r border-gray-200 rounded-s-lg dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-1 focus:ring-rose-400 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
+            }
             aria-current="page"
           >
             Experience
-          </a>
+          </Link>
         </li>
         <li className="w-full focus-within:z-10">
           <a
@@ -38,12 +49,16 @@ const Navbar = ({}) => {
           </a>
         </li>
         <li className="w-full focus-within:z-10">
-          <a
-            href="#"
-            className="inline-block w-full py-4 px-10 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-1 focus:ring-rose-400 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
+          <Link
+            href="/blogs"
+            className={
+              path == "/blogs"
+                ? "inline-block w-full py-4 px-10 text-gray-900 bg-gray-100 border-r border-gray-200 dark:border-gray-700 focus:ring-1 focus:ring-rose-400 active focus:outline-none dark:bg-[#E95278] dark:text-white"
+                : "inline-block w-full py-4 px-10 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-1 focus:ring-rose-400 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
+            }
           >
             Blogs
-          </a>
+          </Link>
         </li>
         <li className="w-full focus-within:z-10">
           <a
