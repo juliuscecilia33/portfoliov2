@@ -10,7 +10,7 @@ const Navbar = ({}) => {
   console.log("current path", path);
 
   return (
-    <div className="w-full h-24 flex items-center justify-between px-10">
+    <div className="w-full h-24 flex items-center justify-between px-10 font-inter">
       <h3 className="text-lg font-medium uppercase">Julius Cecilia</h3>
       <div className="sm:hidden">
         <label htmlFor="tabs" className="sr-only">

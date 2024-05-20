@@ -26,3 +26,27 @@ body {
     text-wrap: balance;
   }
 }
+
+.blogTitle {
+  @apply text-3xl font-bold text-white;
+}
+
+.blogDescription {
+  @apply text-xl font-bold text-gray-400 font-inter;
+}
+
+.blogPictureDescription {
+  @apply text-xl font-normal text-gray-400 font-inter;
+}
+
+.blogHeading {
+  @apply text-xl font-bold text-pink-500 uppercase font-inter;
+}
+
+.blogParagraph {
+  @apply text-xl text-white font-inter;
+}
+
+.highlight {
+  @apply bg-yellow-300 text-black font-inter;
+}
