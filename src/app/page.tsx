@@ -9,11 +9,7 @@ import Navbar from "../components/Navbar";
 import Experience from "../components/Experience";
 
 // Font
-import { Space_Grotesk } from "next/font/google";
-import { Inter } from "next/font/google";
-import Adobe from "../assets/images/Adobe.png";
-import IQAir from "../assets/images/IQAir.png";
-import ChimerocyteWhite from "../assets/images/ChimerocyteWhite.png";
+import { Space_Grotesk, Inter } from "next/font/google";
 
 // Icons
 import {

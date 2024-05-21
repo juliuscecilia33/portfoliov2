@@ -32,19 +32,23 @@ body {
 }
 
 .blogDescription {
-  @apply text-xl font-bold text-gray-400 font-inter;
+  @apply text-base font-medium text-gray-400 font-inter;
+}
+
+.blogType {
+  @apply text-base font-medium font-inter;
 }
 
 .blogPictureDescription {
-  @apply text-xl font-normal text-gray-400 font-inter;
+  @apply text-sm font-normal text-gray-400 font-inter my-2 text-center;
 }
 
 .blogHeading {
-  @apply text-xl font-bold text-pink-500 uppercase font-inter;
+  @apply text-base font-bold text-pink-500 uppercase font-inter my-5;
 }
 
 .blogParagraph {
-  @apply text-xl text-white font-inter;
+  @apply text-base text-white font-inter my-5;
 }
 
 .highlight {
