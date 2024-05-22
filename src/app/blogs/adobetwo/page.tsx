@@ -105,6 +105,16 @@ export default function AdobeTwo() {
           and professionally. I am grateful for the opportunity and look forward
           to applying what I’ve learned in my future endeavors.
         </p>
+        <h3 className="blogHeading">Check out my Linkedin Post on it</h3>
+        <iframe
+          className="rounded mb-20"
+          src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7198477470130446336"
+          height="1762"
+          width="504"
+          frameBorder="0"
+          allowFullScreen={false}
+          title="Embedded post"
+        ></iframe>
       </div>
     </main>
   );

@@ -27,6 +27,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { TbSchool } from "react-icons/tb";
 import { IoDownloadOutline } from "react-icons/io5";
 import Experiences from "@/components/Experiences";
+import Skills from "@/components/Skills";
 
 const spaceGrotesk = Space_Grotesk({
   preload: false,
@@ -40,7 +41,7 @@ export default function Home() {
       <div
         className={`font-heading flex min-h-screen flex-row p-12 justify-between ${spaceGrotesk.className}`}
       >
-        <section
+        <div
           className={`pt-10 mr-10 w-2/6 font-heading flex min-h-screen flex-col ${spaceGrotesk.className}`}
         >
           <Image
@@ -80,123 +81,14 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="mt-20 flex flex-col">
-            <h3
-              className={`mb-6 flex flex-row items-center font-bold text-2xl text-white ${spaceGrotesk.className}`}
-            >
-              <PiBracketsCurlyBold className="text-[#E95278] mr-3" size={40} />
-              Skills
-            </h3>
-            <div className="flex flex-row flex-wrap">
-              <div className="flex flex-col text-center mr-5 mb-5">
-                <div className="w-20 h-20 aspect-square flex bg-[#2E303E] rounded items-center justify-center text-[#E95278] hover:text-white hover:bg-[#E95278] transition">
-                  <RiJavascriptFill size={30} />
-                </div>
-                <p
-                  className={`mt-2 text-xs font-medium uppercase ${inter.className}`}
-                >
-                  Javascript
-                </p>
-              </div>
-              <div className="flex flex-col text-center mr-5 mb-5">
-                <div className="w-20 h-20 aspect-square flex bg-[#2E303E] rounded items-center justify-center text-[#E95278] hover:text-white hover:bg-[#E95278] transition">
-                  <FaPython size={30} />
-                </div>
-                <p
-                  className={`mt-2 text-xs font-medium uppercase ${inter.className}`}
-                >
-                  Python
-                </p>
-              </div>
-              <div className="flex flex-col text-center mr-5 mb-5">
-                <div className="w-20 h-20 aspect-square flex bg-[#2E303E] rounded items-center justify-center text-[#E95278] hover:text-white hover:bg-[#E95278] transition">
-                  <FaJava size={30} />
-                </div>
-                <p
-                  className={`mt-2 text-xs font-medium uppercase ${inter.className}`}
-                >
-                  Java
-                </p>
-              </div>
-              <div className="flex flex-col text-center mr-5 mb-5">
-                <div className="w-20 h-20 aspect-square flex bg-[#2E303E] rounded items-center justify-center text-[#E95278] hover:text-white hover:bg-[#E95278] transition">
-                  <SiTypescript size={30} />
-                </div>
-                <p
-                  className={`mt-2 text-xs font-medium uppercase ${inter.className}`}
-                >
-                  Typescript
-                </p>
-              </div>
-              <div className="flex flex-col text-center mr-5 mb-5">
-                <div className="w-20 h-20 aspect-square flex bg-[#2E303E] rounded items-center justify-center text-[#E95278] hover:text-white hover:bg-[#E95278] transition">
-                  <RiFlutterFill size={30} />
-                </div>
-                <p
-                  className={`mt-2 text-xs font-medium uppercase ${inter.className}`}
-                >
-                  Flutter
-                </p>
-              </div>
-              <div className="flex flex-col text-center mr-5 mb-5">
-                <div className="w-20 h-20 aspect-square flex bg-[#2E303E] rounded items-center justify-center text-[#E95278] hover:text-white hover:bg-[#E95278] transition">
-                  <FaReact size={30} />
-                </div>
-                <p
-                  className={`mt-2 text-xs font-medium uppercase ${inter.className}`}
-                >
-                  React.js
-                </p>
-              </div>
-              <div className="flex flex-col text-center mr-5 mb-5">
-                <div className="w-20 h-20 aspect-square flex bg-[#2E303E] rounded items-center justify-center text-[#E95278] hover:text-white hover:bg-[#E95278] transition">
-                  <FaAngular size={30} />
-                </div>
-                <p
-                  className={`mt-2 text-xs font-medium uppercase ${inter.className}`}
-                >
-                  Angular.js
-                </p>
-              </div>
-              <div className="flex flex-col text-center mr-5 mb-5">
-                <div className="w-20 h-20 aspect-square flex bg-[#2E303E] rounded items-center justify-center text-[#E95278] hover:text-white hover:bg-[#E95278] transition">
-                  <FaNode size={30} />
-                </div>
-                <p
-                  className={`mt-2 text-xs font-medium uppercase ${inter.className}`}
-                >
-                  Node.js
-                </p>
-              </div>
-              <div className="flex flex-col text-center mr-5 mb-5">
-                <div className="w-20 h-20 aspect-square flex bg-[#2E303E] rounded items-center justify-center text-[#E95278] hover:text-white hover:bg-[#E95278] transition">
-                  <BiLogoPostgresql size={30} />
-                </div>
-                <p
-                  className={`mt-2 text-xs font-medium uppercase ${inter.className}`}
-                >
-                  PostgreSQL
-                </p>
-              </div>
-              <div className="flex flex-col text-center mr-5 mb-5">
-                <div className="w-20 h-20 aspect-square flex bg-[#2E303E] rounded items-center justify-center text-[#E95278] hover:text-white hover:bg-[#E95278] transition">
-                  <FaAws size={30} />
-                </div>
-                <p
-                  className={`mt-2 text-xs font-medium uppercase ${inter.className}`}
-                >
-                  AWS
-                </p>
-              </div>
-            </div>
-          </div>
+          <Skills />
           <button
             className={`mr-auto flex justify-center items-center mt-10 px-10 py-3 border-2 border-[#E95278] text-lg text-[#E95278] font-inter font-medium rounded hover:text-white hover:bg-[#E95278] transition ${inter.className}`}
           >
-            Download Resume
+            View Resume
             <IoDownloadOutline className="ml-3" size={20} />
           </button>
-        </section>
+        </div>
         <Experiences />
       </div>
     </main>

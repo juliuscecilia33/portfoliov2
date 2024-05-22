@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 
 import { FaChevronRight } from "react-icons/fa";
 
@@ -56,12 +57,13 @@ const Experience = ({
           </div>
         </div>
       </div>
-      <button
+      <Link
+        href="/blogs/adobetwo"
         className={`flex justify-center items-center mb-10 px-4 py-1.5 bg-[#E95278] text-xs font-inter font-medium rounded-sm ${inter.className}`}
       >
         Read More
         <FaChevronRight className="ml-1" />
-      </button>
+      </Link>
     </div>
   );
 };
