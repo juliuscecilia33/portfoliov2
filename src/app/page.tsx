@@ -28,6 +28,7 @@ import { TbSchool } from "react-icons/tb";
 import { IoDownloadOutline } from "react-icons/io5";
 import Experiences from "@/components/Experiences";
 import Skills from "@/components/Skills";
+import Footer from "@/components/Footer";
 
 const spaceGrotesk = Space_Grotesk({
   preload: false,
@@ -85,12 +86,13 @@ export default function Home() {
           <button
             className={`mr-auto flex justify-center items-center mt-10 px-10 py-3 border-2 border-[#E95278] text-lg text-[#E95278] font-inter font-medium rounded hover:text-white hover:bg-[#E95278] transition ${inter.className}`}
           >
-            View Resume
+            Download Resume
             <IoDownloadOutline className="ml-3" size={20} />
           </button>
         </div>
         <Experiences />
       </div>
+      <Footer />
     </main>
   );
 }
