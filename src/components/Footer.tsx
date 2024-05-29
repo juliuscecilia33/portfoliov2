@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <div className="w-full flex flex-col px-[20%] py-32 mt-20 bg-[#262934]">
+    <div className="w-full flex flex-col px-[20%] pt-24 pb-8 mt-20 bg-[#262934]">
       <h1 className="blogTitle">A big thank you to...</h1>
       <p className="text-base font-bold text-[#E95278] font-inter my-5">
         This section is a special thank you to all who have supported me on my
