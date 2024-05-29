@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
@@ -51,6 +52,14 @@ export default function DesignDecisionsAndTradeOffsOfSoftware() {
           building user interfaces)
         </p>
         <h3 className="blogHeading">Check out my Linkedin Post on it</h3>
+        <iframe
+          src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7201338391227977728"
+          height="1237"
+          width="504"
+          frameBorder="0"
+          allowFullScreen={false}
+          title="Embedded post"
+        ></iframe>
       </div>
     </main>
   );
