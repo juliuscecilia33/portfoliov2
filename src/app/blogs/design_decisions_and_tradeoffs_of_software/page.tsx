@@ -1,22 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import BlogHeading from "../../../components/Blog/BlogHeading";
 
 export default function DesignDecisionsAndTradeOffsOfSoftware() {
   return (
     <main className="flex flex-col">
       <Navbar />
       <div className="flex flex-col mt-10 w-full px-[30%]">
-        <p className="blogDate mb-1 pl-10">May 28, 2024</p>
-        <h1 className="blogTitle px-10">
-          Designs and Decisions and trade-offs of Software
-        </h1>
-        <div className="w-full border-b border-[#2E303E] my-8"></div>
-        <div className="px-10 w-full flex items-center">
-          <p className="blogDescription mr-8">Julius Cecilia</p>
-          <p className="blogDescription mr-8">3-4 min.</p>
-          <p className="blogType text-[#52E9CE]">• Knowledge</p>
-        </div>
+        <BlogHeading
+          date="May 28, 2024"
+          title="Designs and Decisions and trade-offs of Software"
+          timeReading="3-4 min"
+          type="Knowledge"
+        />
         <p className="blogParagraph">
           As a newly grad, aspiring Software Engineer, I’ve been eager to learn
           from industry veterans and pioneers who have shaped the way we
@@ -49,7 +46,7 @@ export default function DesignDecisionsAndTradeOffsOfSoftware() {
         <p className="blogParagraph">
           One Actual Software Design I use a lot and helped me to understand
           decision-making and trade-offs was React.js (Javascript Library for
-          building user interfaces)
+          building user interfaces).
         </p>
         <h3 className="blogHeading">Check out my Linkedin Post on it</h3>
         <iframe
