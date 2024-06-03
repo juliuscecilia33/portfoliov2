@@ -1,135 +1,82 @@
-const Carousel = () => {
+import Image from "next/image";
+import SilderImg01 from "@/public/ps-image-01.png";
+import SilderImg02 from "@/public/ps-image-02.png";
+import SilderImg03 from "@/public/ps-image-03.png";
+import SilderImg04 from "@/public/ps-image-04.png";
+import SilderIcon01 from "@/public/ps-icon-01.svg";
+import SilderIcon02 from "@/public/ps-icon-02.svg";
+import SilderIcon03 from "@/public/ps-icon-03.svg";
+import SilderIcon04 from "@/public/ps-icon-04.svg";
+
+export default function ProgressSlider() {
+  const items = [
+    {
+      img: SilderImg01,
+      desc: "Omnichannel",
+      buttonIcon: SilderIcon01,
+    },
+    {
+      img: SilderImg02,
+      desc: "Multilingual",
+      buttonIcon: SilderIcon02,
+    },
+    {
+      img: SilderImg03,
+      desc: "Interpolate",
+      buttonIcon: SilderIcon03,
+    },
+    {
+      img: SilderImg04,
+      desc: "Enriched",
+      buttonIcon: SilderIcon04,
+    },
+  ];
+
   return (
-    <div
-      id="indicators-carousel"
-      className="relative w-full"
-      data-carousel="static"
-    >
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-        <div
-          className="hidden duration-700 ease-in-out"
-          data-carousel-item="active"
-        >
-          <img
-            src="/docs/images/carousel/carousel-1.svg"
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
-        </div>
-        <div className="hidden duration-700 ease-in-out" data-carousel-item>
-          <img
-            src="/docs/images/carousel/carousel-2.svg"
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
-        </div>
-        <div className="hidden duration-700 ease-in-out" data-carousel-item>
-          <img
-            src="/docs/images/carousel/carousel-3.svg"
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
-        </div>
-        <div className="hidden duration-700 ease-in-out" data-carousel-item>
-          <img
-            src="/docs/images/carousel/carousel-4.svg"
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
-        </div>
-        <div className="hidden duration-700 ease-in-out" data-carousel-item>
-          <img
-            src="/docs/images/carousel/carousel-5.svg"
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
+    <div className="w-full max-w-5xl mx-auto text-center">
+      {/* Item image */}
+      <div className="transition-all duration-150 delay-300 ease-in-out">
+        <div className="relative flex flex-col">
+          {items.map((item, index) => (
+            <Image
+              className="rounded-xl"
+              src={item.img}
+              width={1024}
+              height={576}
+              alt={item.desc}
+              key={index}
+            />
+          ))}
         </div>
       </div>
-      <div className="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
-        <button
-          type="button"
-          className="w-3 h-3 rounded-full"
-          aria-current="true"
-          aria-label="Slide 1"
-          data-carousel-slide-to="0"
-        ></button>
-        <button
-          type="button"
-          className="w-3 h-3 rounded-full"
-          aria-current="false"
-          aria-label="Slide 2"
-          data-carousel-slide-to="1"
-        ></button>
-        <button
-          type="button"
-          className="w-3 h-3 rounded-full"
-          aria-current="false"
-          aria-label="Slide 3"
-          data-carousel-slide-to="2"
-        ></button>
-        <button
-          type="button"
-          className="w-3 h-3 rounded-full"
-          aria-current="false"
-          aria-label="Slide 4"
-          data-carousel-slide-to="3"
-        ></button>
-        <button
-          type="button"
-          className="w-3 h-3 rounded-full"
-          aria-current="false"
-          aria-label="Slide 5"
-          data-carousel-slide-to="4"
-        ></button>
+      {/* Buttons */}
+      <div className="max-w-xs sm:max-w-sm md:max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+        {items.map((item, index) => (
+          <button
+            key={index}
+            className="p-2 rounded focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 group"
+          >
+            <span className="text-center flex flex-col items-center">
+              <span className="flex items-center justify-center relative w-9 h-9 rounded-full bg-indigo-100 mb-2">
+                <Image src={item.buttonIcon} alt={item.desc} />
+              </span>
+              <span className="block text-sm font-medium text-slate-900 mb-2">
+                {item.desc}
+              </span>
+              <span
+                className="block relative w-full bg-slate-200 h-1 rounded-full"
+                role="progressbar"
+                aria-valuenow={0}
+              >
+                <span
+                  className="absolute inset-0 bg-indigo-500 rounded-[inherit]"
+                  style={{ width: "0%" }}
+                ></span>
+              </span>
+            </span>
+          </button>
+        ))}
       </div>
-      <button
-        type="button"
-        className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-prev
-      >
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg
-            className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 6 10"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 1 1 5l4 4"
-            />
-          </svg>
-          <span className="sr-only">Previous</span>
-        </span>
-      </button>
-      <button
-        type="button"
-        className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-next
-      >
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg
-            className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 6 10"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="m1 9 4-4-4-4"
-            />
-          </svg>
-          <span className="sr-only">Next</span>
-        </span>
-      </button>
     </div>
   );
-};
+}

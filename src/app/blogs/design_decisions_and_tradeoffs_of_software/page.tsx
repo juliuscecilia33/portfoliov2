@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import BlogHeading from "../../../components/Blog/BlogHeading";
+import Carousel from "@/components/Carousel";
 
 export default function DesignDecisionsAndTradeOffsOfSoftware() {
   return (
